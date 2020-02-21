@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClotheSystem", "ClotheSystem\ClotheSystem.csproj", "{D8C1A06D-2291-4CB5-A932-9D9ABA083011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgteBackOffice", "WidgteBackOffice\WidgteBackOffice.csproj", "{AEE12523-86DF-471D-8818-F438EAA1055D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesBackOffice", "WidgteBackOffice\ClothesBackOffice.csproj", "{AEE12523-86DF-471D-8818-F438EAA1055D}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WidgteFrontOffice", "WidgteFrontOffice\", "{177CCAB2-6AA0-4D69-8C06-FC361D68E8B2}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -25,12 +25,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WidgteFrontOffice", "Widgte
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "9318"
+		SlnRelativePath = "WidgteFrontOffice\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgteClasses", "WidgteClasses\WidgteClasses.csproj", "{EFAE5FED-8E59-4224-8A47-BC5F317ADCC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesClasses", "WidgteClasses\ClothesClasses.csproj", "{EFAE5FED-8E59-4224-8A47-BC5F317ADCC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Widgte Testing", "Widgte Testing\Widgte Testing.csproj", "{FC2C5C8F-FB37-4B19-9BBF-895F928944B5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesTesting", "Widgte Testing\ClothesTesting.csproj", "{FC2C5C8F-FB37-4B19-9BBF-895F928944B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
