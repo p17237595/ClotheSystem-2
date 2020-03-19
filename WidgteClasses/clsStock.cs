@@ -1,4 +1,6 @@
 ﻿using System;
+using WidgteClasses;
+
 
 namespace WidgteClasses
 {
@@ -15,6 +17,11 @@ namespace WidgteClasses
 
         //Not sure if the line below belongs here or in tstStock.cs
         DateTime TestData = DateTime.Now.Date;
+
+
+        //Where does this stuff go? I'm not sure.
+
+
     }
 
 }
