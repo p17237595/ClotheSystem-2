@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClotheSystem", "ClotheSystem\ClotheSystem.csproj", "{D8C1A06D-2291-4CB5-A932-9D9ABA083011}"
 EndProject
@@ -29,8 +29,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ClothesFrontOffice", "Cloth
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "2578"
+		SlnRelativePath = "ClothesFrontOffice\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothesTesting1", "ClothesTesting1\ClothesTesting1.csproj", "{F5415E70-395E-48BB-BD2F-97A53C2626D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +61,10 @@ Global
 		{9D87E556-34CA-4635-9F54-C08EB5391E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D87E556-34CA-4635-9F54-C08EB5391E76}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D87E556-34CA-4635-9F54-C08EB5391E76}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F5415E70-395E-48BB-BD2F-97A53C2626D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5415E70-395E-48BB-BD2F-97A53C2626D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5415E70-395E-48BB-BD2F-97A53C2626D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5415E70-395E-48BB-BD2F-97A53C2626D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
