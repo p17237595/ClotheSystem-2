@@ -1,0 +1,5 @@
+/home/techmaster254/Projects/todayWorks/todayWorks/bin/todayWorks.dll
+/home/techmaster254/Projects/todayWorks/todayWorks/bin/todayWorks.pdb
+/home/techmaster254/Projects/todayWorks/todayWorks/obj/Debug/todayWorks.csprojAssemblyReference.cache
+/home/techmaster254/Projects/todayWorks/todayWorks/obj/Debug/todayWorks.dll
+/home/techmaster254/Projects/todayWorks/todayWorks/obj/Debug/todayWorks.pdb
