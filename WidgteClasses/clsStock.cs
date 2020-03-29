@@ -19,8 +19,16 @@ namespace WidgteClasses
         DateTime TestData = DateTime.Now.Date;
 
 
-        //Where does this stuff go? I'm not sure.
+        //Where does this stuff go? I'm not sure. - Is code missing here?
 
+
+        //Find method stuff
+        public bool Find(int Price)
+        {
+            mPrice = 21;
+            //Always return true
+            return true;
+        }
 
     }
 
