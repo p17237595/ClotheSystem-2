@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>SomeStock</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -33,10 +33,15 @@
             <asp:Label ID="DateArrivedLabel" runat="server" Text="DateArrived"></asp:Label>
             <asp:TextBox ID="DateArrivedText" runat="server"></asp:TextBox>
             </p>
+            <p>
+            <asp:Label ID="ActiveLabel" runat="server" Text="Active"></asp:Label>
+            <asp:CheckBox  ID="ActiveCheck" runat="server" /></asp:CheckBox>
+            </p>
         </div>
 
         <div>
         <asp:Button ID="btnOK" runat="server" Text="OK" />
+        <asp:Button ID="btnFind" runat="server" Text="Find" />
         <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
         </div>
     </form>
