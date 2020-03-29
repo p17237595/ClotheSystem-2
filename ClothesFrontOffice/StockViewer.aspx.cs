@@ -17,6 +17,8 @@ public partial class StockViewer : System.Web.UI.Page
         //display the address for this entry
         Response.Write(SomeStock.Gender);
     }
+    
+    //Does this stuff even belong here?
     protected void btnOK_Click(object sender, EventArgs e)
     {
         //Create a new instance of clsStock

@@ -96,7 +96,39 @@ namespace ClothesTesting1
             //test to see that the two values are the same
             Assert.AreEqual(SomeStock.DateArrived, TestData);
         }
-
+        public void FindMethodOK()
+        {
+            //Create an instance of the class we want to create
+            clsStock SomeStock = new clsStock();
+            //Boolean variable to sotre the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 Price = 1;
+            //invoke the method
+            Found = SomeStock.Find(Price);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+        public void TestPriceFound()
+        {
+            //Create an instance of the class we want to create
+            clsStock SomeStock = new clsStock();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is ok (assume it is)
+            Boolean OK = true;
+            //Create some test data to use with the method
+            Int32 Price = 21;
+            //Invoke the method
+            Found = SomeStock.Find(Price);
+            //check the price
+            if (SomeStock.Price != 21)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
 
 
     }
