@@ -13,31 +13,9 @@ public partial class StockViewer : System.Web.UI.Page
         //create a new instance of clsStock
         clsStock SomeStock = new clsStock();
         //get the data from the session object
-        SomeStock = (clsStock)Session["SomeStock"];
-        //display the address for this entry
-        Response.Write(SomeStock.Gender);
-    }
-    
-    //Does this stuff even belong here?
-    protected void btnOK_Click(object sender, EventArgs e)
-    {
-        //Create a new instance of clsStock
-        clsStock SomeStock = new clsStock();
-        //Capture the gender
-        SomeStock.Gender = GenderText.Text;
-        //Capture the size
-        SomeStock.Size = SizeText.Text;
-        //Capture the description
-        SomeStock.Description = DescriptionText.Text;
-        //Capture the Price
-        SomeStock.Price = PriceText.Text;
-        //Capture the stock
-        SomeStock.InStock = InStockCheck.Text;
-        //Capture the date arrived
-        SomeStock.DateArrived = Convert.ToDateTime(DateArrivedText.Text);
-        //Store the stock in the session object
-        Session["SomeStock"] = SomeStock;
-        //redirect to the viewer page
-        Response.Redirect("StockViewer.aspx");
+        SomeStock = (clsStock)Session["AnAddress"];
+        //display the house number for this entry
+        Response.Write(SomeStock.Description);
+
     }
 }
