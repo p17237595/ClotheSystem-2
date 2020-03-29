@@ -9,7 +9,7 @@ using System.Data;
 ///This class uses the ado.net sql classes to provide a connection to an sql server database.
 ///it is free for use by anybody so long as you give credit to the original author i.e me
 ///Matthew Dean mjdean@dmu.ac.uk De Montfort University 2013
-namespace ClassLibrary
+namespace WidgteClasses
 {
     public class clsDataConnection
     {
@@ -225,7 +225,6 @@ namespace ClassLibrary
             }
         }
 
-        //Is this in the right place?
         public bool Find(int Price)
         {
             //create an instance of the data connection
