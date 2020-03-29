@@ -105,6 +105,38 @@ namespace ClothesTesting1
             Assert.AreEqual(AllStock.StockList, TestList);
         }
 
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //Create an instance of the class we want to create
+            clsStockCollection AllStock = new clsStockCollection();
+            //create the item of test data
+            clsStock TestItem = new clsStock();
+            //var to store the primary key
+            //Don't know if this needs to be Doulbe instead of INT32 -----------------------
+            Double PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.Gender = "Male";
+            TestItem.Size = "Medium";
+            TestItem.Description = "Nice shoes";
+            TestItem.Price = 120.99;
+            TestItem.InStock = true;
+            TestItem.DateArrived = DateTime.Now.Date;
+            //set ThisStock to the test data
+            AllStock.ThisStock = TestItem;
+            //add the record
+            PrimaryKey = AllStock.Add();
+            //set the primary key of the test data
+            TestItem.Price = PrimaryKey;
+            //Find the record
+            AllStock.ThisStock.Find(PrimaryKey);
+            //test to see that the two values are the same
+            Assert.AreEqual(AllStock.ThisStock, TestItem);
+
+        }
+
+
 
     }
 }
