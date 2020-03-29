@@ -14,6 +14,8 @@ namespace WidgteClasses
     {
         //private data member for the list
         List<clsStock> mStockList = new List<clsStock>();
+        //Private data member thisStock
+        clsStock mThisStock = new clsStock();
 
         //constructor. I made this earlier but now on page 14 lab 23 creating the collection class it shows something totally different so do I just delete this again? Super confusing.
         public clsStockCollection()
@@ -108,13 +110,30 @@ namespace WidgteClasses
         }
 
 
-        //I think this is rubbish
-        /*
         //property
-        public clsStock ThisStock;
-        */
+        public clsStock ThisStock
+        {
+            get
+            {
+                //return the private data
+                return mThisStock;
+            }
+            set
+            {
+                //set the private data
+                mThisStock = value;
+            }
+        }
 
-
+        public int Add()
+        {
+            //Adds a new record to the database based on the values of mThisStock
+            //Set the primary key value of the new record
+            mThisStock.Price = 20.99;
+            //return the primary key of the new record
+            //This variable is a double but apparently it needs to be int ------------------
+            return mThisStock.Price;
+        }
 
     }
 
