@@ -224,5 +224,40 @@ namespace ClassLibrary
                 dataTable = value;
             }
         }
+
+        //Is this in the right place?
+        public bool Find(int Price)
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the price to search for
+            DB.AddParameter("@Price", Price);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_FilterByPrice");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                mGender = Convert.ToString(DB.dataTable.Rows[0]["Gender"]);
+                mSize = Convert.ToString(DB.dataTable.Rows[0]["Size"]);
+                mDescription = Convert.ToString(DB.dataTable.Rows[0]["Description"]);
+                mPrice = Convert.ToString(DB.dataTable.Rows[0]["Price"]);
+                mInStock = Convert.ToString(DB.dataTable.Rows[0]["InStock"]);
+                mDateArrived = Convert.ToString(DB.dataTable.Rows[0]["DateArrived"]);
+
+
+                //return that everything worked OK
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+        }
+
+
     }
 }
