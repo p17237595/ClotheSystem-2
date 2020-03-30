@@ -168,6 +168,23 @@ namespace WidgteClasses
             //execute the stored procedure
             DB.Execute("sproc_tblAddress_Delete");
         }
+
+        public void Update()
+        {
+            //update an existing record based on the values of thisStock
+            //Connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@Active", mThisStock.Active);
+            DB.AddParameter("@Gender", mThisStock.Gender);
+            DB.AddParameter("@Size", mThisStock.Size);
+            DB.AddParameter("@Description", mThisStock.Description);
+            DB.AddParameter("@Price", mThisStock.Price);
+            DB.AddParameter("@InStock", mThisStock.InStock);
+            DB.AddParameter("@DateArrived", mThisStock.DateArrived);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_Update");
+        }
     }
 
 
