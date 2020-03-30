@@ -129,7 +129,34 @@ namespace ClothesTesting1
             //test to see that the result is correct
             Assert.IsTrue(OK);
         }
-
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsStockCollection AllStock = new clsStockCollection();
+            //create the item of test data
+            clsStock TestItem = new clsStock();
+            //var to store the primary key. The instructions say to use int32 but I will use Double --------------------- I changed it back again.
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.Active = true;
+            TestItem.Gender = "Male";
+            TestItem.Size = "Small";
+            TestItem.Description = "Socks";
+            TestItem.Price = 2.99;
+            TestItem.InStock = true;
+            TestItem.DateArrived = DateTime.Now.Date;
+            //set thisStock to the test data
+            AllStock.ThisStock = TestItem;
+            //Add the record
+            AllStock.ThisStock.Find(PrimaryKey);
+            //delete the record
+            AllStock.Delete();
+            //now find the record
+            Boolean Found = AllStock.ThisStock.Find(PrimaryKey);
+            //Test to see that the record was not found
+            Assert.IsFalse(Found);
+        }
 
     }
 }

@@ -22,12 +22,23 @@ public partial class _Default : System.Web.UI.Page
         //Create an instance of the County collection
         WidgteClasses.clsStockCollection Stocks = new WidgteClasses.clsStockCollection();
         //set the data source to the list of countries in the collection
-        1stStocks.Datasource = Stocks.StockList;
+        lstStocks.Datasource = Stocks.StockList;
         //set the name of the primary key
-        1stStocks.DataValueField = "Price";
+        lstStocks.DataValueField = "Price";
         //set the data field to display
-        1stStocks.DataTextField = "Description";
+        lstStocks.DataTextField = "Description";
         //bind the data to the list
-        1stStocks.DataBind();
+        lstStocks.DataBind();
     }
+
+    //Event handler for the add button
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        //store -1 into the session object to indicate this is a new record
+        Session["Price"] = -1;
+        //redirect to the data entry page
+        Response.Redirect("SomeStock.aspx");
+    }
+
+
 }

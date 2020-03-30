@@ -40,7 +40,8 @@ namespace ClassLibrary
             SomeStock.DateArrived = Convert.ToDateTime(DateArrivedText.Text);
             //Variable to store any error message
             string Error = "";
-            Error = SomeStock.Valid(Gender, sizeof, MetaDescription, Price, InStock, DataArrived);
+            //Validate the data
+            Error = SomeStock.Valid(Gender, Size, Description, Price, InStock, DataArrived);
             if (Error == "")
             {
 
