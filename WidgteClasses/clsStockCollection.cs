@@ -125,7 +125,11 @@ namespace WidgteClasses
             }
         }
 
-        public int Add()
+
+        //This is another part where the instructions just change it totally after already making it.
+        /*
+        //The instructions say this needs to be int rather than Doulble but i need it for my price.
+        public Double Add()
         {
             //Adds a new record to the database based on the values of mThisStock
             //Set the primary key value of the new record
@@ -134,7 +138,36 @@ namespace WidgteClasses
             //This variable is a double but apparently it needs to be int ------------------
             return mThisStock.Price;
         }
+        */
 
+        public int Add()
+        {
+            //adds a new record to the database based on the values of thisStock
+            //connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //Set the parameters for the stored procedure
+            DB.AddParameter("@Active", mThisStock.Active);
+            DB.AddParameter("@Gender", mThisStock.Gender);
+            DB.AddParameter("@Size", mThisStock.Size);
+            DB.AddParameter("@Description", mThisStock.Description);
+            DB.AddParameter("@Price", mThisStock.Price);
+            DB.AddParameter("@InStock", mThisStock.InStock);
+            DB.AddParameter("@DateArrived", mThisStock.DateArrived);
+            //execute the query returning the primary key value
+            return DB.Execute("sproc_tblStock_Insert");
+
+        }
+
+        public void Delete()
+        {
+            //Deletes the record pointed to by thisStock
+            //Connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //set the parameters for the stored procedure
+            DB.AddParameter("@Price", mThisStock.Price);
+            //execute the stored procedure
+            DB.Execute("sproc_tblAddress_Delete");
+        }
     }
 
 
