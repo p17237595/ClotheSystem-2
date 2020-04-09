@@ -13,6 +13,19 @@
         </div>
         <div>
         <asp:Button ID="btnAdd" runat="server" Text="Add" />
+            <asp:Button ID="btnEdit" runat="server" Text="Edit" />
+            <asp:Button ID="btnDelete" runat="server" Text="Delete" />
+        </div>
+        <div>
+            Enter a Gender 
+            <asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
+        </div>
+        <div>
+            <asp:Button ID="btnApply" runat="server" Text="Apply" />
+            <asp:Button ID="btnClear" runat="server" Text="Clear" />
+        </div>
+        <div>
+            <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>
         </div>
     </form>
 </body>

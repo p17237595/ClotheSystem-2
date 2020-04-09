@@ -18,6 +18,7 @@ namespace WidgteClasses
         clsStock mThisStock = new clsStock();
 
         //constructor. I made this earlier but now on page 14 lab 23 creating the collection class it shows something totally different so do I just delete this again? Super confusing.
+        /*
         public clsStockCollection()
         {
             //create the items of test data
@@ -44,10 +45,11 @@ namespace WidgteClasses
             TestItem.DateArrived = DateTime.Now.Date;
             //add the item to the test list
             mStockList.Add(TestItem);
-        }
+        */
         List<clsStock> mStockList = new List<clsStock>();
 
-        //Constructor for the class. This is page 14 lab 23 stuff. Above it is already created but the instructions show this code instead. Don't know which one I actually need.
+        //Constructor for the class. This is page 14 lab 23 stuff. Above it is already created but the instructions show this code instead. Don't know which one I actually need. Lab 24 Page 32 just tells me to change it once again?
+        /*
         public clsStockCollection()
         {
             //var for the index
@@ -79,6 +81,24 @@ namespace WidgteClasses
                 Index++;
             }
         }
+        */
+
+        //Constructor lab 24 page 32 tells me to make:
+        public clsStockCollection()
+        {
+            //object for data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_SelectAll");
+            //populate the array list with data table
+            PopulateArray(DB);
+                
+        }
+
+
+
+
+
 
         //property
         public List<clsStock> StockList
@@ -166,7 +186,7 @@ namespace WidgteClasses
             //set the parameters for the stored procedure
             DB.AddParameter("@Price", mThisStock.Price);
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_Delete");
+            DB.Execute("sproc_tblStock_Delete");
         }
 
         public void Update()
@@ -185,6 +205,49 @@ namespace WidgteClasses
             //execute the stored procedure
             DB.Execute("sproc_tblStock_Update");
         }
+
+        public void ReportByGender(string Gender)
+        {
+            //Filters the records based on a full or partial gender
+            //Connect to the database
+            clsDataConnection DB = new clsDataConnection();
+            //Send the Gender parameter to the database
+            DB.AddParameter("@Gender", Gender);
+            //execute the stored procedure
+            DB.Execute("sproc_tblStock_FilterByGender");
+            //populate the array list with the data table
+            PopulateArray(DB);
+        }
+        
+        void PopulateArray(clsDataConnection DB)
+        {
+            //populates the array list based on the data table in the parameter DB
+            //var for the index
+            Int32 Index = 0;
+            //Var to store the record count
+            Int32 RecordCount;
+            //Get the count of records
+            RecordCount = DB.Count;
+            //Clear the private array list
+            mStockList = new List<clsStock>();
+            //While there are records to process
+            while (Index < RecordCount)
+            {
+                //create a blank address
+                clsStock SomeStock = new clsStock();
+                //read in the fields from the current record
+                SomeStock.Active = Convert.ToBoolean(DB.DataTable.Rows[Index]["Active"]);
+                SomeStock.Gender = Convert.ToString(DB.DataTable.Rows[Index]["Gender"]);
+                SomeStock.Size = Convert.ToString(DB.DataTable.Rows[Index]["Size"]);
+                SomeStock.Description = Convert.ToString(DB.DataTable.Rows[Index]["Description"]);
+                SomeStock.Price = Convert.ToInt32(DB.DataTable.Rows[Index]["Price"]);
+                SomeStock.InStock = Convert.ToBoolean(DB.DataTable.Rows[Index]["InStock"]);
+                SomeStock.DateArrived = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateArrived"]);
+            }
+        }
+
+
+
     }
 
 
