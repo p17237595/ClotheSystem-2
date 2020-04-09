@@ -10,32 +10,32 @@
     <form id="form1" runat="server">
         <div>
             <p>
-            <asp:Label ID="GenderLabel" runat="server" Text="Gender"></asp:Label>
-            <asp:TextBox ID="GenderTxt" runat="server"></asp:TextBox>
+            <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
+            <asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
             </p>
             <p>
-            <asp:Label ID="SizeLabel" runat="server" Text="Size"></asp:Label>
-            <asp:TextBox ID="SizeText" runat="server"></asp:TextBox>
+            <asp:Label ID="lblSize" runat="server" Text="Size"></asp:Label>
+            <asp:TextBox ID="txtSize" runat="server"></asp:TextBox>
             </p>
             <p>
-            <asp:Label ID="DescriptionLabel" runat="server" Text="Description"></asp:Label>
-            <asp:TextBox ID="DescriptionText" runat="server"></asp:TextBox>
+            <asp:Label ID="lblDescription" runat="server" Text="Description"></asp:Label>
+            <asp:TextBox ID="txtDescription" runat="server"></asp:TextBox>
             </p>
             <p>
-            <asp:Label ID="PriceLabel" runat="server" Text="Price"></asp:Label>
-            <asp:TextBox ID="PriceText" runat="server"></asp:TextBox>
+            <asp:Label ID="lblPrice" runat="server" Text="Price"></asp:Label>
+            <asp:TextBox ID="txtPrice" runat="server"></asp:TextBox>
             </p>
             <p>
-            <asp:Label ID="InStockLabel" runat="server" Text="InStock"></asp:Label>
-            <asp:CheckBox  ID="InStockCheck" runat="server" /></asp:CheckBox>
+            <asp:Label ID="lblInStock" runat="server" Text="InStock"></asp:Label>
+            <asp:CheckBox  ID="chkInStock" runat="server" /></asp:CheckBox>
             </p>
             <p>
-            <asp:Label ID="DateArrivedLabel" runat="server" Text="DateArrived"></asp:Label>
-            <asp:TextBox ID="DateArrivedText" runat="server"></asp:TextBox>
+            <asp:Label ID="lblDateArrived" runat="server" Text="DateArrived"></asp:Label>
+            <asp:TextBox ID="txtDateArrived" runat="server"></asp:TextBox>
             </p>
             <p>
-            <asp:Label ID="ActiveLabel" runat="server" Text="Active"></asp:Label>
-            <asp:CheckBox  ID="ActiveCheck" runat="server" /></asp:CheckBox>
+            <asp:Label ID="lblActive" runat="server" Text="Active"></asp:Label>
+            <asp:CheckBox  ID="chkActive" runat="server" /></asp:CheckBox>
             </p>
         </div>
 
