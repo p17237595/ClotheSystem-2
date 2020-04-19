@@ -1,0 +1,2 @@
+C:\Users\outha\source\repos\todaysWorks\todaysWorks\obj\Debug\todaysWorks.csproj.CoreCompileInputs.cache
+C:\Users\outha\source\repos\todaysWorks\todaysWorks\obj\Debug\todaysWorks.csprojAssemblyReference.cache
