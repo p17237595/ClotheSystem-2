@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -193,6 +194,7 @@
     <Compile Include="AnAddressViewer.aspx.designer.cs">
       <DependentUpon>AnAddressViewer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="clsDataConnection.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -202,7 +204,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="clsDataConnection.cs" />
     <Compile Include="ClsAddress.cs" />
     <Compile Include="ClsAddressCollection.cs" />
     <Compile Include="Contact.aspx.cs">

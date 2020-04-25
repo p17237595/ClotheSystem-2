@@ -68,7 +68,7 @@ namespace todaysWorks
             else //if no record has been selected
             {
                 //display an error
-                lblError.Text = "Please select a record to delete from the list";
+                //lblError.Text = "Please select a record to delete from the list";
             }
         }
 
