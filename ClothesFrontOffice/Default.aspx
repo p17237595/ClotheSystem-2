@@ -9,9 +9,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Button id="Add" runat="server" Text="Add" OnClick="button1Clicked" />
-            <asp:Button id="Edit" runat="server" Text="Edit" OnClick="button2Clicked" />
-            <asp:Button id="Delete" runat="server" Text="Delete" OnClick="button3Clicked" />
+            <asp:ListBox ID="lstStockList" runat="server"></asp:ListBox>
+            <br />
+            <br />
+            <asp:Button id="Add" runat="server" Text="Add"  />
+            <asp:Button id="Edit" runat="server" Text="Edit" />
+            <asp:Button id="Delete" runat="server" Text="Delete"  />
 
             <br />
             <asp:Label ID="lblError" runat="server" Text="lblError"></asp:Label>

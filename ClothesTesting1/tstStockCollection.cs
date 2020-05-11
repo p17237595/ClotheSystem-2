@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WidgteClasses;
+using System.Collections.Generic;
 
 namespace ClothesTesting1
 {
@@ -114,7 +115,7 @@ namespace ClothesTesting1
             clsStock TestItem = new clsStock();
             //var to store the primary key
             //Don't know if this needs to be Doulbe instead of INT32 -----------------------
-            Double PrimaryKey = 0;
+            int PrimaryKey = 0;
             //set its properties
             TestItem.Active = true;
             TestItem.Gender = "Male";

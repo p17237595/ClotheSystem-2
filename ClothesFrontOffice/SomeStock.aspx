@@ -37,6 +37,11 @@
             <asp:Label ID="lblActive" runat="server" Text="Active"></asp:Label>
             <asp:CheckBox  ID="chkActive" runat="server" /></asp:CheckBox>
             </p>
+            <p>
+                &nbsp;</p>
+            <p>
+                <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
+            </p>
         </div>
 
         <div>

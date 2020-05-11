@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
+            <asp:ListBox ID="lstStockList" runat="server"></asp:ListBox>
         </div>
         <div>
         <asp:Button ID="btnAdd" runat="server" Text="Add" />
@@ -18,7 +18,7 @@
         </div>
         <div>
             Enter a Gender 
-            <asp:TextBox ID="txtGender" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtFilter" runat="server"></asp:TextBox>
         </div>
         <div>
             <asp:Button ID="btnApply" runat="server" Text="Apply" />

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 
 //I think the correct namespace to use os this one.
 namespace WidgteClasses
@@ -46,7 +46,7 @@ namespace WidgteClasses
             //add the item to the test list
             mStockList.Add(TestItem);
         */
-        List<clsStock> mStockList = new List<clsStock>();
+        //List<clsStock> mStockList = new List<clsStock>();
 
         //Constructor for the class. This is page 14 lab 23 stuff. Above it is already created but the instructions show this code instead. Don't know which one I actually need. Lab 24 Page 32 just tells me to change it once again?
         /*

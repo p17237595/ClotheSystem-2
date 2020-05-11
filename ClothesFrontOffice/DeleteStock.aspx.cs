@@ -10,7 +10,7 @@ public partial class DeleteStock : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //get the price to be deleted from the session object Double or int32 ------------------------
-        Price = Convert.ToInt32(Session["Price"]);
+        //Price = Convert.ToInt32(Session["Price"]); variable not declared
     }
 }
 //Not certain this is in the right place.

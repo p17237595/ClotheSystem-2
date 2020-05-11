@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Web;
 using System.Web.UI;
-using ClassLibrary;
+//using ClassLibrary;
 using System.Web.UI.WebControls;
 using WidgteClasses;
 
-namespace ClassLibrary
-{
+//namespace ClassLibrary
+//{
     public partial class SomeStock : System.Web.UI.Page
     {
         //Another part of code that I have created but the instructions just tell me something totally different later on.
@@ -64,33 +64,33 @@ namespace ClassLibrary
             //Capture the description
             SomeStock.Description = txtDescription.Text;
             //Capture the Price
-            SomeStock.Price = txtPrice.Text;
+            SomeStock.Price =Convert.ToDouble( txtPrice.Text);
             //Capture the stock
-            SomeStock.InStock = chkInStock.Text;
+            SomeStock.InStock = chkInStock.Checked;
             //Capture the date arrived
             SomeStock.DateArrived = Convert.ToDateTime(txtDateArrived.Text);
             //Variable to store any error message
             string Error = "";
             //Validate the data
-            Error = SomeStock.Valid(Gender, Size, Description, Price, InStock, DataArrived);
+            //Error = SomeStock.Valid(Gender, Size, Description, Price, InStock, DataArrived);//this code needs serious review
             if (Error == "")
             {
                 //capture Active
                 SomeStock.Active = chkActive.Checked;
-                //Capture gender
-                SomeStock.Gender = Gender;
-                //capture size
-                SomeStock.Size = Size;
-                //Capture description
-                SomeStock.Description = Description;
-                //capture price
-                SomeStock.Price = Price;
+            //Capture gender
+            //SomeStock.Gender = Gender; variable not declared
+            //capture size
+            //SomeStock.Size = Size; variable not declared
+            //Capture description
+            //SomeStock.Description = Description; variable not declared
+            //capture price
+            SomeStock.Price = Price;
                 //Capture inStock
                 SomeStock.InStock = chkInStock.Checked;
-                //Capture DateArrived
-                SomeStock.DateArrived = Convert.ToDateTime(DateArrived);
-                //Create a new instance of the stock collection
-                clsStockCollection StockList = new clsStockCollection();
+            //Capture DateArrived
+            //SomeStock.DateArrived = Convert.ToDateTime(DateArrived); variable not declared
+            //Create a new instance of the stock collection
+            clsStockCollection StockList = new clsStockCollection();
 
                 //if this is a new record i.e. Price = -1 then add the data
                 if (Price == -1)
@@ -135,4 +135,4 @@ namespace ClassLibrary
         }
     }
     
-}
+//}

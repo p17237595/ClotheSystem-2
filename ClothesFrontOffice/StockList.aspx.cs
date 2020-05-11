@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WidgteClasses;
 
-//This was public partial class StockList : System.Web.UI.Page but I have changed it to match the instructions
-public partial class _Default : System.Web.UI.Page
+public partial class StockList : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -23,13 +22,13 @@ public partial class _Default : System.Web.UI.Page
         //Create an instance of the County collection
         WidgteClasses.clsStockCollection Stocks = new WidgteClasses.clsStockCollection();
         //set the data source to the list of countries in the collection
-        lstStocks.Datasource = Stocks.StockList;
+        lstStockList.DataSource = Stocks.StockList;
         //set the name of the primary key
-        lstStocks.DataValueField = "Price";
+        lstStockList.DataValueField = "Price";
         //set the data field to display
-        lstStocks.DataTextField = "Description";
+        lstStockList.DataTextField = "Description";
         //bind the data to the list
-        lstStocks.DataBind();
+        lstStockList.DataBind();
     }
 
     //Event handler for the add button
@@ -45,7 +44,7 @@ public partial class _Default : System.Web.UI.Page
     protected void btnApply_Click(object sender, EventArgs e)
     {
         //create an instance of the stock collection
-        clsStockCollection Stock = new clsStockCollection();
+        WidgteClasses.clsStockCollection Stock = new WidgteClasses.clsStockCollection();
         Stock.ReportByGender(txtFilter.Text);
         lstStockList.DataSource = Stock.StockList;
         //set the name of the primary key
@@ -53,13 +52,13 @@ public partial class _Default : System.Web.UI.Page
         //set the name of the field to display
         lstStockList.DataTextField = "Gender";
         //bind the data to the list
-        lstAddressList.DataBind();
+        lstStockList.DataBind();
     }
 
     protected void btnClear_Click(object sender, EventArgs e)
     {
         //create an instance of the stock collection
-        clsStockCollection Stock = new clsStockCollection();
+        WidgteClasses.clsStockCollection Stock = new WidgteClasses.clsStockCollection();
         Stock.ReportByGender("");
         //clear any existing filter to tidy up the interface
         txtFilter.Text = "";
@@ -69,8 +68,6 @@ public partial class _Default : System.Web.UI.Page
         //set the name of the field to display
         lstStockList.DataTextField = "Gender";
         //bind the data to the list
-        lstAddressList.DataBind();
+        lstStockList.DataBind();
     }
-
-
 }
