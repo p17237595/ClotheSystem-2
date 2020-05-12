@@ -21,7 +21,7 @@ namespace WebSellApp
             var conns = new MySqlConnection(ConfigurationManager.ConnectionStrings["silvioConnectionString"].ConnectionString);
             conns.Open();
 
-            string checkuser = "select count(*) from user where username ='" + TextBoxUsername.Text + "'";
+            string checkuser = "select count(*) from user where username ='" + TextBoxUsername.Text + "' and password = '" + TextBoxPass.Text + "'";
             //SqlCommand com = new SqlCommand(checkuser,conn);
             var com2 = new MySqlCommand(checkuser, conns);
             int temp = Convert.ToInt32(com2.ExecuteScalar().ToString());
@@ -29,22 +29,24 @@ namespace WebSellApp
             if (temp == 1)
             {
                 conns.Open();
-                string checkpass = "select count(*) from user where username ='" + TextBoxUsername.Text + "' and password = '" + TextBoxPass.Text + "'";
-                //SqlCommand com = new SqlCommand(checkuser,conn);
-                com2 = new MySqlCommand(checkpass, conns);
-                temp = Convert.ToInt32(com2.ExecuteScalar().ToString());
+                string checkrole = "select role from user where username ='" + TextBoxUsername.Text + "' and password = '" + TextBoxPass.Text + "'";
+                //SqlCommand com = new SqlCommand(checkrole,conn);
+                com2 = new MySqlCommand(checkrole, conns);
+                string role = com2.ExecuteScalar().ToString();
                 conns.Close();
-                if (temp == 1)
+                if (role == "1")
                 {
-                    Session["New"] = TextBoxUsername.Text;
+                    Session["Admin"] = TextBoxUsername.Text;
                     Response.Redirect("Manager.aspx");
-                } else
-                {
-                    Response.Write("Password incorrect");
                 }
+                else {
+                    Session["New"] = TextBoxUsername.Text;
+                    Response.Redirect("UserHome.aspx");
+                }
+
             } else
             {
-                Response.Write("User incorrect");
+                Response.Write("User//Pass incorrect");
             }
         }
     }

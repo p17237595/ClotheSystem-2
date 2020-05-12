@@ -69,7 +69,9 @@
                 <td class="auto-style5">
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" Width="152px" />
                 </td>
-                <td>&nbsp;</td>
+                <td>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registration.aspx">New user? Register!</asp:HyperLink>
+                </td>
             </tr>
             <tr>
                 <td class="auto-style3">&nbsp;</td>
