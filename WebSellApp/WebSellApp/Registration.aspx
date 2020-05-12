@@ -126,7 +126,7 @@
             <tr>
                 <td class="auto-style5"></td>
                 <td class="auto-style8">
-                    <asp:Button ID="Button1" runat="server" Text="Register!" Width="164px" />
+                    <asp:Button ID="Button1" runat="server" Text="Register!" Width="164px" OnClick="Button1_Click1" />
                 </td>
                 <td class="auto-style6"></td>
             </tr>
