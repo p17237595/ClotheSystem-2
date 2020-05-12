@@ -28,13 +28,11 @@ namespace WebSellApp
                 var com2 = new MySqlCommand(checkuser, conns);
                 int temp = Convert.ToInt32(com2.ExecuteScalar().ToString());
                 conns.Close();
-                if (temp >= 1)
+                if (temp == 1)
                 {
                     Response.Write("User alredy exists");
                     return;
-                }
-
-                
+                } 
 
             try
             {
@@ -49,15 +47,31 @@ namespace WebSellApp
                 com.Parameters.AddWithValue("@pass", TextBoxPass.Text);
                 com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
                 com.ExecuteNonQuery();
-                Response.Redirect("Manager.aspx");
-                Response.Write("Registration is successful");
-
-
                 conn.Close();
+                if (Session["New"] == null || Session["New"] != "Admin")
+                {
+                    Response.Redirect("Login.aspx");
+                    Response.Write("Registration is successful");
+                }
+                else {
+                    Response.Redirect("Manager.aspx");
+                } 
 
             }
             catch(Exception ex) {
                 Response.Write("Error:" + ex.ToString());
+            }
+        }
+
+        protected void Back_Click(object sender, EventArgs e)
+        {
+            if (Session["New"] == null || Session["New"] != "Admin")
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                Response.Redirect("Manager.aspx");
             }
         }
     }

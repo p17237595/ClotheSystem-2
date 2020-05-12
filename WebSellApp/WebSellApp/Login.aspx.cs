@@ -36,7 +36,7 @@ namespace WebSellApp
                 conns.Close();
                 if (role == "1")
                 {
-                    Session["Admin"] = TextBoxUsername.Text;
+                    Session["New"] = "Admin";
                     Response.Redirect("Manager.aspx");
                 }
                 else {

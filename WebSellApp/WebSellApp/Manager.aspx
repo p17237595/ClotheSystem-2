@@ -11,7 +11,9 @@
     <form id="form1" runat="server">
         <div>
             <asp:SqlDataSource ID="SqlDataSourceRegistration" runat="server" OnSelecting="SqlDataSource1_Selecting" ConnectionString="<%$ ConnectionStrings:silvioConnectionString %>" ProviderName="<%$ ConnectionStrings:silvioConnectionString.ProviderName %>" SelectCommand="SELECT id, username, password, email, role FROM `user` where role = 2"></asp:SqlDataSource>
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSourceRegistration" ForeColor="#333333" GridLines="None">
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="New User" />
+            <br />
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="SqlDataSourceRegistration" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
@@ -33,6 +35,8 @@
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
         </div>
+        <asp:Button ID="loguot" runat="server" OnClick="loguot_Click" Text="Logout" />
+&nbsp;
     </form>
 </body>
 </html>

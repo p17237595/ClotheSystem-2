@@ -173,6 +173,7 @@
     <Content Include="Registration.aspx" />
     <Content Include="Manager.aspx" />
     <Content Include="UserHome.aspx" />
+    <Content Include="UpdateUser.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -284,6 +285,13 @@
     </Compile>
     <Compile Include="UserHome.aspx.designer.cs">
       <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

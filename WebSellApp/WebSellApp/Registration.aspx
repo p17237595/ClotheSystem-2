@@ -124,7 +124,9 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style5"></td>
+                <td class="auto-style5">
+                    <asp:Button ID="Back" runat="server" OnClick="Back_Click" Text="Go Back!" CausesValidation="false" />
+                </td>
                 <td class="auto-style8">
                     <asp:Button ID="Button1" runat="server" Text="Register!" Width="164px" OnClick="Button1_Click1" />
                 </td>
@@ -136,6 +138,8 @@
                 <td>&nbsp;</td>
             </tr>
         </table>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>
