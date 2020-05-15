@@ -5,10 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Log In!</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css">
     <style type="text/css">
         .auto-style1 {
-            font-size: xx-large;
+            font-size: large;
             text-align: center;
         }
         .auto-style2 {
@@ -39,6 +40,7 @@
         .auto-style9 {
             color: #FF0000;
         }
+        
     </style>
 </head>
 <body>
@@ -80,5 +82,5 @@
             </tr>
         </table>
     </form>
-</body>
+    </body>
 </html>

@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Admin Managment</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css">
 </head>
 <body>
     <form id="form1" runat="server">

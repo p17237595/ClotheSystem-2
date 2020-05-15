@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Update User</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css">
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -25,6 +26,10 @@
         }
         .auto-style9 {
             margin-right: 8px;
+        }
+        .auto-style10 {
+            font-weight: bold;
+            background-color: #FF0000;
         }
     </style>
 </head>
@@ -130,13 +135,15 @@
                 </tr>
                 <tr>
                     <td class="auto-style2">
-                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Go Back" CausesValidation="false" />
+                        <asp:Button CssClass="back" ID="Button2" runat="server" OnClick="Button2_Click" Text="Go Back" CausesValidation="false" />
                     </td>
                     <td class="auto-style3">
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Update" Width="145px" />
                     </td>
                     <td>
-        <asp:Button ID="DeleteUser" runat="server" OnClick="DeleteUser_Click" Text="Delete User" />
+                        <strong>
+        <asp:Button ID="DeleteUser" runat="server" OnClick="DeleteUser_Click" Text="Delete User" CssClass="auto-style10" />
+                        </strong>
                     </td>
                 </tr>
             </table>

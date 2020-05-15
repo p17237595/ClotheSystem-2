@@ -5,20 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>New User!</title>
+     <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css">
     <style type="text/css">
         .auto-style1 {
             width: 100%;
         }
         .auto-style2 {
-            width: 276px;
+            width: 206px;
         }
         .auto-style3 {
-            width: 276px;
+            width: 206px;
             text-align: left;
         }
         .auto-style5 {
-            width: 276px;
+            width: 206px;
             height: 25px;
         }
         .auto-style6 {
@@ -35,7 +36,7 @@
             color: #FF3300;
         }
         .auto-style10 {
-            width: 276px;
+            width: 206px;
             text-align: left;
             height: 33px;
         }
@@ -48,7 +49,7 @@
             height: 33px;
         }
         .auto-style13 {
-            width: 276px;
+            width: 206px;
             text-align: left;
             height: 62px;
         }
@@ -61,7 +62,7 @@
             height: 62px;
         }
         .auto-style16 {
-            width: 276px;
+            width: 206px;
             text-align: left;
             height: 66px;
         }

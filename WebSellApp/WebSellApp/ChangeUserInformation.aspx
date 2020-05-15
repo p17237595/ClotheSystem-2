@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>User Information</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css">
     <style type="text/css">
         .auto-style1 {
             width: 100%;
         }
         .auto-style2 {
             width: 278px;
+            text-align: left;
         }
         .auto-style3 {
             width: 246px;
@@ -22,6 +24,7 @@
         .auto-style5 {
             width: 278px;
             height: 80px;
+            text-align: left;
         }
         .auto-style6 {
             width: 246px;
@@ -48,6 +51,11 @@
         .auto-style16 {
             height: 31px;
             width: 450px;
+        }
+        .auto-style17 {
+            width: 278px;
+            height: 31px;
+            text-align: left;
         }
     </style>
 </head>
@@ -100,7 +108,7 @@
                 <td class="auto-style16">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style8">
+                <td class="auto-style17">
                     Name</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="TextBoxCName" runat="server" Width="210px"></asp:TextBox>
@@ -110,7 +118,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">
+                <td class="auto-style17">
                     Address</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="TextBoxCAddress" runat="server" CssClass="auto-style13" Width="210px"></asp:TextBox>
@@ -120,7 +128,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">
+                <td class="auto-style17">
                     Card Name</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="TextBoxCCName" runat="server" Width="210px"></asp:TextBox>
@@ -130,7 +138,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">
+                <td class="auto-style17">
                     Card No</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="TextBoxCCNo" runat="server" Width="210px"></asp:TextBox>
@@ -140,7 +148,7 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style8">
+                <td class="auto-style17">
                     Card Expire</td>
                 <td class="auto-style9">
                     <asp:TextBox ID="TextBoxCCExpire" runat="server" Width="210px"></asp:TextBox>

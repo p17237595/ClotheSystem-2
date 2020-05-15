@@ -5,7 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>User Home!</title>
+    <link rel="stylesheet" type="text/css" href="css/StyleSheet1.css">
     <style type="text/css">
         .auto-style1 {
             height: 50px;
@@ -19,13 +20,20 @@
         .auto-style5 {
             width: 269px;
         }
+        .auto-style6 {
+            font-weight: bold;
+            background-color: #FF0000;
+        }
+        .auto-style7 {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1">
             <asp:Label ID="Label_welcome" runat="server" Text="Welcome:"></asp:Label>
-            <br />
+            &nbsp;<br />
         </div>
         <table class="auto-style2">
             <tr>
@@ -33,8 +41,10 @@
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Change Information" Width="241px" />
                 </td>
                 <td class="auto-style5">&nbsp;</td>
-                <td>
-                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Delete Account" />
+                <td class="auto-style7">
+                    <strong>
+                    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Delete Account" CssClass="auto-style6" />
+                    </strong>
                 </td>
             </tr>
             <tr>
