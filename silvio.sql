@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-05-2020 a las 06:20:36
+-- Tiempo de generación: 15-05-2020 a las 08:13:51
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -30,11 +30,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `customer` (
   `Auto_ID` int(11) NOT NULL,
-  `CustomerName` varchar(50) NOT NULL,
-  `CustomerAddress` varchar(50) NOT NULL,
-  `CustomerCardName` varchar(50) NOT NULL,
-  `CustomerCardNo` int(11) NOT NULL,
-  `CustomerCardExpire` int(11) NOT NULL,
+  `CustomerName` varchar(50) DEFAULT NULL,
+  `CustomerAddress` varchar(50) DEFAULT NULL,
+  `CustomerCardName` varchar(50) DEFAULT NULL,
+  `CustomerCardNo` int(11) DEFAULT NULL,
+  `CustomerCardExpire` int(11) DEFAULT NULL,
   `user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -44,7 +44,8 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`Auto_ID`, `CustomerName`, `CustomerAddress`, `CustomerCardName`, `CustomerCardNo`, `CustomerCardExpire`, `user`) VALUES
 (1, 'Jhon Doe', 'Address 1', 'Visa', 123456, 2025, 2),
-(3, 'admin', 'admin', 'admin', 1, 1, 1);
+(3, 'admin', 'admin', 'admin', 1, 1, 1),
+(5, 'Jhon Doed', 'd', NULL, NULL, NULL, 11);
 
 -- --------------------------------------------------------
 
@@ -67,7 +68,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `role`) VALUES
 (1, 'admin', 'admin', 'admin@admin.com', 1),
 (2, 'test1', 'test1', 'test@test.com', 2),
-(9, 'algo', '1', 'algo@mail.com', 2);
+(11, 'test', 'asd', 'test@test.com', 2);
 
 --
 -- Índices para tablas volcadas
@@ -93,13 +94,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `Auto_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Auto_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

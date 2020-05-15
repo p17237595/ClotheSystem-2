@@ -39,13 +39,20 @@ namespace WebSellApp
                 //SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["silvioConnectionString"].ConnectionString);
                 var conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["silvioConnectionString"].ConnectionString);
                 conn.Open();
-
+                // add new user
                 string insertUser = "INSERT INTO user (id,username, password, email, role) VALUES (NULL, @username, @pass, @email, 2)";
                 //SqlCommand com = new SqlCommand(insertUser, conn);
                 var com = new MySqlCommand(insertUser, conn);
                 com.Parameters.AddWithValue("@username", TextBoxUsername.Text);
                 com.Parameters.AddWithValue("@pass", TextBoxPass.Text);
                 com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
+                com.ExecuteNonQuery();
+                long id = com.LastInsertedId;
+
+                //add new customer
+                string insertCustomer = "INSERT INTO customer (Auto_ID, CustomerName, CustomerAddress, CustomerCardName, CustomerCardNo, CustomerCardExpire, user) VALUES (NULL, NULL, NULL, NULL, NULL,NULL, @id);";
+                com = new MySqlCommand(insertCustomer, conn);
+                com.Parameters.AddWithValue("@id", id);
                 com.ExecuteNonQuery();
                 conn.Close();
                 if (Session["New"] == null || Session["New"] != "Admin")
