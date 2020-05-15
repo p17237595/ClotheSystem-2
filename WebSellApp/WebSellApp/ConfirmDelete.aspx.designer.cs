@@ -11,7 +11,7 @@ namespace WebSellApp
 {
 
 
-    public partial class WebForm3
+    public partial class ConfirmDelete
     {
 
         /// <summary>
@@ -24,24 +24,6 @@ namespace WebSellApp
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control Label_welcome.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label_welcome;
-
-        /// <summary>
-        /// Control Button1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
-
-        /// <summary>
         /// Control Button2.
         /// </summary>
         /// <remarks>
@@ -51,12 +33,12 @@ namespace WebSellApp
         protected global::System.Web.UI.WebControls.Button Button2;
 
         /// <summary>
-        /// Control B_logout.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button B_logout;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

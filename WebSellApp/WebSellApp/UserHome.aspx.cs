@@ -26,5 +26,15 @@ namespace WebSellApp
             Response.Write("Good Bye");
             Response.Redirect("Login.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ChangeUserInformation.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ConfirmDelete.aspx");
+        }
     }
 }
