@@ -27,7 +27,7 @@ namespace WebSellApp
             if (!Page.IsPostBack)
             {
                 var id = Session["IDU"];
-                string checkuser = "select username,password,email from user where id ='" + id + "'";
+                string checkuser = "select id,password,email,username, CustomerName, CustomerAddress, CustomerCardName, CustomerCardNo, CustomerCardExpire from user inner join customer on customer.user = user.id where id ='" + id + "'";
                 var conns = new MySqlConnection(ConfigurationManager.ConnectionStrings["silvioConnectionString"].ConnectionString);
                 conns.Open();
                 var com2 = new MySqlCommand(checkuser, conns);
@@ -36,6 +36,13 @@ namespace WebSellApp
                 TextBoxUser.Text = reader["username"].ToString();
                 TextBoxPass.Text = reader["password"].ToString();
                 TextBoxEmail.Text = reader["email"].ToString();
+
+                TextBoxCName.Text = reader["CustomerName"].ToString();
+                TextBoxCAddress.Text = reader["CustomerAddress"].ToString();
+                TextBoxCCName.Text = reader["CustomerCardName"].ToString();
+                TextBoxCCNo.Text = reader["CustomerCardNo"].ToString();
+                TextBoxCCExpire.Text = reader["CustomerCardExpire"].ToString();
+
                 conns.Close();
             }
         }
@@ -83,6 +90,18 @@ namespace WebSellApp
                 com.Parameters.AddWithValue("@password", TextBoxPass.Text);
                 com.Parameters.AddWithValue("@email", TextBoxEmail.Text);
                 com.ExecuteNonQuery();
+
+
+                string updatecustomer = "UPDATE customer SET  CustomerName = @cname, CustomerAddress = @caddress, CustomerCardName = @ccname, CustomerCardNo = @ccno, CustomerCardExpire = @cce where user = @userid";
+                com = new MySqlCommand(updatecustomer, conn);
+                com.Parameters.AddWithValue("@cname", TextBoxCName.Text);
+                com.Parameters.AddWithValue("@caddress", TextBoxCAddress.Text);
+                com.Parameters.AddWithValue("@ccname", TextBoxCCName.Text);
+                com.Parameters.AddWithValue("@ccno", TextBoxCCNo.Text);
+                com.Parameters.AddWithValue("@cce", TextBoxCCExpire.Text);
+                com.Parameters.AddWithValue("@userid", id);
+                com.ExecuteNonQuery();
+
                 conn.Close();
                 Response.Redirect("Manager.aspx");
             }

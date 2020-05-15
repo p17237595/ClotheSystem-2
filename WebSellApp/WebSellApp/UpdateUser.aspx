@@ -19,6 +19,13 @@
         .auto-style4 {
             color: #FF0000;
         }
+        .auto-style8 {
+            width: 278px;
+            height: 31px;
+        }
+        .auto-style9 {
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
@@ -58,6 +65,68 @@
                     <td>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxEmail" CssClass="auto-style4" ErrorMessage="Enter a valid email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     </td>
+                </tr>
+                <tr>
+                <td class="auto-style8">
+                    Name</td>
+                    <td class="auto-style3">
+                        <asp:TextBox ID="TextBoxCName" runat="server" Width="270px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBoxCName" CssClass="auto-style4" ErrorMessage="Customer name is required"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                <td class="auto-style8">
+                    Address</td>
+                    <td class="auto-style3">
+                        <asp:TextBox ID="TextBoxCAddress" runat="server" CssClass="auto-style9" Width="270px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBoxCAddress" CssClass="auto-style4" ErrorMessage="Customer address is required"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                <td class="auto-style8">
+                    Card Name</td>
+                    <td class="auto-style3">
+                        <asp:TextBox ID="TextBoxCCName" runat="server" Width="270px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBoxCCName" CssClass="auto-style4" ErrorMessage="Card Name is required"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                <td class="auto-style8">
+                    Card No</td>
+                    <td class="auto-style3">
+                        <asp:TextBox ID="TextBoxCCNo" runat="server" Width="270px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="TextBoxCCNo" CssClass="auto-style4" ErrorMessage="Card No is required"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                <td class="auto-style8">
+                    Card Expire</td>
+                    <td class="auto-style3">
+                        <asp:TextBox ID="TextBoxCCExpire" runat="server" Width="270px"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="TextBoxCCExpire" CssClass="auto-style4" ErrorMessage="Card expire date is required"></asp:RequiredFieldValidator>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style2">&nbsp;</td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
