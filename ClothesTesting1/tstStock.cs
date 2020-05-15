@@ -137,7 +137,7 @@ namespace ClothesTesting1
             //create the item of test data
             clsStock TestItem = new clsStock();
             //var to store the primary key. The instructions say to use int32 but I will use Double --------------------- I changed it back again.
-            Int32 PrimaryKey = 0;
+            int PrimaryKey = 0;
             //set its properties
             TestItem.Active = true;
             TestItem.Gender = "Male";

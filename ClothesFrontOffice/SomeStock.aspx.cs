@@ -10,18 +10,7 @@ using WidgteClasses;
 //{
     public partial class SomeStock : System.Web.UI.Page
     {
-        //Another part of code that I have created but the instructions just tell me something totally different later on.
-        /*
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            //create a new instance of clsStock
-            clsStock SomeStock = new clsStock();
-            //get the data from the session object
-            SomeStock = (clsStock)Session["SomeStock"];
-            //display the address for this entry
-            Response.Write(SomeStock.Price);
-        }
-        */
+
         Int32 Price;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,7 +32,10 @@ using WidgteClasses;
             clsStockCollection StockBook = new clsStockCollection();
             //find the record to update
             StockBook.ThisStock.Find(Price);
-            //display the data for this record
+        //display the data for this record
+        //txtGender.DataSource = StockBook.StockList;
+
+
             txtGender.Text = StockBook.ThisStock.Gender.ToString();
             txtSize.Text = StockBook.ThisStock.Size.ToString();
             txtDescription.Text = StockBook.ThisStock.Description.ToString();
@@ -118,20 +110,7 @@ using WidgteClasses;
                 //display the error message
                 lblError.Text = Error;
             }
-            //Some more code that is changed totally
-            /*
-            {
-                //Store the stock in the session object
-                Session["SomeStock"] = SomeStock;
-                //redirect to the viewer page
-                Response.Redirect("StockViewer.aspx");
-            }
-            else
-            {
-                //display the error message
-                lblError.Text = Error;
-            }
-            */
+            
         }
     }
     

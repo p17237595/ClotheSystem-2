@@ -41,20 +41,7 @@ namespace ClothesTesting1
             Assert.IsNotNull(AllStock);
             */
         }
-        /*
-        [TestMethod]
-        public void CountStockOK()
-        {
-            //create an instance of the class we want to create
-            clsStockCollection AllStock = new clsStockCollection();
-            //create some test data to assign to the property
-            Int32 SomeCount = 2;
-            //Assign data to the property
-            AllStock.Count = SomeCount;
-            //Test to see that the two values are the same
-            Assert.AreEqual(AllStock.Count, SomeCount);
-        }
-        */
+       
         [TestMethod]
         public void ThisStockOK()
         {
@@ -114,7 +101,6 @@ namespace ClothesTesting1
             //create the item of test data
             clsStock TestItem = new clsStock();
             //var to store the primary key
-            //Don't know if this needs to be Doulbe instead of INT32 -----------------------
             int PrimaryKey = 0;
             //set its properties
             TestItem.Active = true;
