@@ -158,6 +158,10 @@ namespace WidgteClasses
                 SomeStock.Price = Convert.ToInt32(DB.DataTable.Rows[Index]["Price"]);
                 SomeStock.InStock = Convert.ToBoolean(DB.DataTable.Rows[Index]["InStock"]);
                 SomeStock.DateArrived = Convert.ToDateTime(DB.DataTable.Rows[Index]["DateArrived"]);
+                //add the record to the private data member
+                mStockList.Add(SomeStock);
+                //point at the next record
+                Index++;
             }
         }
 

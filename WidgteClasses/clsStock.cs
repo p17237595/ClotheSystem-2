@@ -131,7 +131,7 @@ namespace WidgteClasses
         }
 
 
-
+        /*
         public bool Find(int Price)
         {
             //set the private data members to the test data value
@@ -145,6 +145,39 @@ namespace WidgteClasses
             //always return true
             return true;
         }
+        */
+
+        public bool Find(int Price)
+        {
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //add the parameter for the address no to search for
+            DB.AddParameter("@StockNo", Price);
+            //execute the stored procedure
+            DB.Execute("sproc_tblAddress_FilterByStockNo");
+            //if one record is found (there should be either one or zero!)
+            if (DB.Count == 1)
+            {
+                //copy the data from the database to the private data members
+                mGender = Convert.ToString(DB.DataTable.Rows[0]["Gender"]);
+                mSize = Convert.ToString(DB.DataTable.Rows[0]["Size"]);
+                mDescription = Convert.ToString(DB.DataTable.Rows[0]["Description"]);
+                mPrice = Convert.ToInt32(DB.DataTable.Rows[0]["Town"]);
+                mInStock = Convert.ToBoolean(DB.DataTable.Rows[0]["InStock"]);
+                mDateArrived = Convert.ToDateTime(DB.DataTable.Rows[0]["DateArrived"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["Active"]);
+                //return that everything worked OK
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
+        }
+
+
 
         public string Valid(string Gender, string DateArrived, string Description, string Price, string Size)
         {
