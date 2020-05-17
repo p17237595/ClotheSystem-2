@@ -33,7 +33,6 @@ using WidgteClasses;
             //find the record to update
             StockBook.ThisStock.Find(Price);
         //display the data for this record
-        //txtGender.DataSource = StockBook.StockList;
 
 
             txtGender.Text = StockBook.ThisStock.Gender.ToString();

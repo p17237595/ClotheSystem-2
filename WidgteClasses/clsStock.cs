@@ -152,9 +152,9 @@ namespace WidgteClasses
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //add the parameter for the address no to search for
-            DB.AddParameter("@StockNo", Price);
+            DB.AddParameter("@Price", Price);
             //execute the stored procedure
-            DB.Execute("sproc_tblAddress_FilterByStockNo");
+            DB.Execute("sproc_tblAddress_FilterByPrice");
             //if one record is found (there should be either one or zero!)
             if (DB.Count == 1)
             {
