@@ -1,0 +1,55 @@
+﻿body {
+    background-color: azure;
+}
+
+#Button1 {
+    border-radius: 5%;
+    height: 30px;
+}
+
+#Button1:hover {
+     background-color: blueviolet;
+}
+
+#B_logout {
+    border-radius: 5%;
+    height: 30px;
+}
+
+#B_logout:hover {
+   background-color: blueviolet;
+}
+
+#Button3 {
+    border-radius: 5%;
+    height: 30px;
+}
+
+#Button3:hover {
+     background-color: blueviolet;
+ }
+#loguot {
+    border-radius: 5%;
+    height: 30px;
+}
+
+    #loguot:hover {
+        background-color: blueviolet;
+    }
+
+#Back {
+    border-radius: 5%;
+    height: 30px;
+}
+
+    #Back:hover {
+        background-color: blueviolet;
+    }
+.back {
+    border-radius: 5%;
+    height: 30px;
+}
+
+.back:hover {
+    background-color: blueviolet;
+}
